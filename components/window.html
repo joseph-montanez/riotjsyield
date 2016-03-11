@@ -1,0 +1,31 @@
+<window>
+	<style scoped type="text/less">
+		.panel-heading {
+			padding: 8px;
+			h4 {
+				margin: 0;
+				padding: 0;
+			}
+		}
+		.panel-body {
+			-webkit-overflow-scrolling: touch;
+		}
+		.panel-footer {
+
+		}
+	</style>
+	<div class="window panel panel-default">
+		<div class="panel-heading">
+			<button type="button" class="btn btn-xs btn-link pull-right" onclick={ close }><i class="fa fa-times"></i></button>
+			<button type="button" class="btn btn-xs btn-link pull-right" onclick={ maximize }><i class="fa fa-expand"></i></button>
+			<button type="button" class="btn btn-xs btn-link pull-right" onclick={ minimize }><i class="fa fa-minus"></i></button>
+			<h4 class="window-title">{ title }</h4>
+		</div>
+		<div class="panel-body" style="overflow: auto">
+			<yield from="body"/>
+		</div>
+		<div class="panel-footer">
+			<yield from="footer"/>
+		</div>
+	</div>
+</window>
